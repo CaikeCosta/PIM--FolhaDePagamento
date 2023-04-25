@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonCadastrarFuncionario = new System.Windows.Forms.Button();
-            this.buttonVerificarFuncionario = new System.Windows.Forms.Button();
+            this.btnInserirCPF_Funcionario = new System.Windows.Forms.Button();
             this.buttonLGPD = new System.Windows.Forms.Button();
             this.buttonSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -79,15 +79,16 @@
             this.buttonCadastrarFuncionario.UseVisualStyleBackColor = true;
             this.buttonCadastrarFuncionario.Click += new System.EventHandler(this.button1_Click);
             // 
-            // buttonVerificarFuncionario
+            // btnInserirCPF_Funcionario
             // 
-            this.buttonVerificarFuncionario.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonVerificarFuncionario.Location = new System.Drawing.Point(333, 261);
-            this.buttonVerificarFuncionario.Name = "buttonVerificarFuncionario";
-            this.buttonVerificarFuncionario.Size = new System.Drawing.Size(288, 36);
-            this.buttonVerificarFuncionario.TabIndex = 4;
-            this.buttonVerificarFuncionario.Text = "Verificar funcionário";
-            this.buttonVerificarFuncionario.UseVisualStyleBackColor = true;
+            this.btnInserirCPF_Funcionario.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnInserirCPF_Funcionario.Location = new System.Drawing.Point(333, 261);
+            this.btnInserirCPF_Funcionario.Name = "btnInserirCPF_Funcionario";
+            this.btnInserirCPF_Funcionario.Size = new System.Drawing.Size(288, 36);
+            this.btnInserirCPF_Funcionario.TabIndex = 4;
+            this.btnInserirCPF_Funcionario.Text = "Verificar funcionário";
+            this.btnInserirCPF_Funcionario.UseVisualStyleBackColor = true;
+            this.btnInserirCPF_Funcionario.Click += new System.EventHandler(this.buttonVerificarFuncionario_Click);
             // 
             // buttonLGPD
             // 
@@ -117,7 +118,7 @@
             this.ClientSize = new System.Drawing.Size(947, 559);
             this.Controls.Add(this.buttonSair);
             this.Controls.Add(this.buttonLGPD);
-            this.Controls.Add(this.buttonVerificarFuncionario);
+            this.Controls.Add(this.btnInserirCPF_Funcionario);
             this.Controls.Add(this.buttonCadastrarFuncionario);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -136,7 +137,7 @@
         private Label label2;
         private Label label3;
         private Button buttonCadastrarFuncionario;
-        private Button buttonVerificarFuncionario;
+        private Button btnInserirCPF_Funcionario;
         private Button buttonLGPD;
         private Button buttonSair;
     }

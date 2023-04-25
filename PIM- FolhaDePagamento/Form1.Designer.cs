@@ -76,12 +76,14 @@
             this.txtSenha.PlaceholderText = "Senha";
             this.txtSenha.Size = new System.Drawing.Size(268, 26);
             this.txtSenha.TabIndex = 3;
+            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
             // botaoEntrar
             // 
-            this.botaoEntrar.Location = new System.Drawing.Point(270, 265);
+            this.botaoEntrar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.botaoEntrar.Location = new System.Drawing.Point(270, 267);
             this.botaoEntrar.Name = "botaoEntrar";
-            this.botaoEntrar.Size = new System.Drawing.Size(100, 26);
+            this.botaoEntrar.Size = new System.Drawing.Size(103, 33);
             this.botaoEntrar.TabIndex = 4;
             this.botaoEntrar.Text = "Entrar";
             this.botaoEntrar.UseVisualStyleBackColor = true;

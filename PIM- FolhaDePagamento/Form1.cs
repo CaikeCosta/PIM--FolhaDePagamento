@@ -27,7 +27,7 @@ namespace PIM__FolhaDePagamento
 
         private void botaoEntrar_Click(object sender, EventArgs e)
         {
-            if(txtLogin.Text == "LoginADM" && txtSenha.Text == "SenhaADM")
+            if(txtLogin.Text == "a" && txtSenha.Text == "a")
             {
                 this.Close();
                 ntTelaLogada = new Thread(TelaLogadaForm);
@@ -56,6 +56,11 @@ namespace PIM__FolhaDePagamento
             {
                 botaoEntrar_Click(null, null);
             }
+        }
+
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
