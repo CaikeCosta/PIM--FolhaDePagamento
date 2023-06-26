@@ -18,22 +18,6 @@ namespace PIM__FolhaDePagamento
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonSair_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja sair do sistema?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
@@ -51,11 +35,6 @@ namespace PIM__FolhaDePagamento
         private void InserirCPF_Funcionario()
         {
             Application.Run(new InserirCPF_Funcionario());
-        }
-
-        private void TelaLogada_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
         }
     }
 }

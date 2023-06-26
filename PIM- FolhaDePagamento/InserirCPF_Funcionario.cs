@@ -38,7 +38,6 @@ namespace PIM__FolhaDePagamento
         {
 
         }
-
         private void VerificarFuncionario()
         {
             Application.Run(new VerificarFuncionario());
