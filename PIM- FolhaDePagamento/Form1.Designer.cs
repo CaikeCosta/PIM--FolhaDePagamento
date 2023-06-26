@@ -28,94 +28,108 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtLogin = new System.Windows.Forms.TextBox();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.botaoEntrar = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(191, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(288, 35);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "BOT - Best Of Tickets";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            label2 = new Label();
+            txtLogin = new TextBox();
+            txtSenha = new TextBox();
+            botaoEntrar = new Button();
+            pictureBox2 = new PictureBox();
+            btnEsqueciSenha = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            SuspendLayout();
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(270, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Recursos Humanos";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            label2.AutoSize = true;
+            label2.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(355, 83);
+            label2.Name = "label2";
+            label2.Size = new Size(162, 33);
+            label2.TabIndex = 1;
+            label2.Text = "Área de login";
+            label2.Click += label2_Click;
             // 
             // txtLogin
             // 
-            this.txtLogin.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtLogin.Location = new System.Drawing.Point(191, 164);
-            this.txtLogin.Name = "txtLogin";
-            this.txtLogin.PlaceholderText = "Login";
-            this.txtLogin.Size = new System.Drawing.Size(268, 26);
-            this.txtLogin.TabIndex = 2;
-            this.txtLogin.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            txtLogin.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtLogin.Location = new Point(302, 137);
+            txtLogin.Name = "txtLogin";
+            txtLogin.PlaceholderText = "Login";
+            txtLogin.Size = new Size(268, 26);
+            txtLogin.TabIndex = 2;
+            txtLogin.TextChanged += textBox1_TextChanged;
             // 
             // txtSenha
             // 
-            this.txtSenha.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSenha.Location = new System.Drawing.Point(191, 217);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.PasswordChar = '*';
-            this.txtSenha.PlaceholderText = "Senha";
-            this.txtSenha.Size = new System.Drawing.Size(268, 26);
-            this.txtSenha.TabIndex = 3;
-            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
+            txtSenha.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSenha.Location = new Point(302, 180);
+            txtSenha.Name = "txtSenha";
+            txtSenha.PasswordChar = '*';
+            txtSenha.PlaceholderText = "Senha";
+            txtSenha.Size = new Size(268, 26);
+            txtSenha.TabIndex = 3;
+            txtSenha.TextChanged += txtSenha_TextChanged;
             // 
             // botaoEntrar
             // 
-            this.botaoEntrar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.botaoEntrar.Location = new System.Drawing.Point(270, 267);
-            this.botaoEntrar.Name = "botaoEntrar";
-            this.botaoEntrar.Size = new System.Drawing.Size(103, 33);
-            this.botaoEntrar.TabIndex = 4;
-            this.botaoEntrar.Text = "Entrar";
-            this.botaoEntrar.UseVisualStyleBackColor = true;
-            this.botaoEntrar.Click += new System.EventHandler(this.botaoEntrar_Click);
+            botaoEntrar.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            botaoEntrar.Location = new Point(366, 241);
+            botaoEntrar.Name = "botaoEntrar";
+            botaoEntrar.Size = new Size(117, 49);
+            botaoEntrar.TabIndex = 4;
+            botaoEntrar.Text = "Entrar";
+            botaoEntrar.UseVisualStyleBackColor = true;
+            botaoEntrar.Click += botaoEntrar_Click;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(48, 52);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(248, 238);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 5;
+            pictureBox2.TabStop = false;
+            // 
+            // btnEsqueciSenha
+            // 
+            btnEsqueciSenha.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEsqueciSenha.Location = new Point(366, 306);
+            btnEsqueciSenha.Name = "btnEsqueciSenha";
+            btnEsqueciSenha.Size = new Size(117, 49);
+            btnEsqueciSenha.TabIndex = 6;
+            btnEsqueciSenha.Text = "Esqueci a senha";
+            btnEsqueciSenha.UseVisualStyleBackColor = true;
+            btnEsqueciSenha.Click += btnEsqueciSenha_Click;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 399);
-            this.Controls.Add(this.botaoEntrar);
-            this.Controls.Add(this.txtSenha);
-            this.Controls.Add(this.txtLogin);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.KeyPreview = true;
-            this.Name = "Form1";
-            this.Text = "BOTRH - LOGIN";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(637, 399);
+            Controls.Add(btnEsqueciSenha);
+            Controls.Add(pictureBox2);
+            Controls.Add(botaoEntrar);
+            Controls.Add(txtSenha);
+            Controls.Add(txtLogin);
+            Controls.Add(label2);
+            KeyPreview = true;
+            Name = "Form1";
+            Text = "BOTRH - LOGIN";
+            Load += Form1_Load;
+            KeyDown += Form1_KeyDown;
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private Label label2;
         private TextBox txtLogin;
         private TextBox txtSenha;
         private Button botaoEntrar;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private Button btnEsqueciSenha;
     }
 }

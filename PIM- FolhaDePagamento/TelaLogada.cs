@@ -13,7 +13,10 @@ namespace PIM__FolhaDePagamento
 {
     public partial class TelaLogada : Form
     {
-        Thread ntInserirCPF_Funcionario;
+        Thread ntCadastrarFuncionario;
+        Thread ntVerificarFuncionario;
+        Thread ntEmpresa;
+        Thread ntLGPD;
         public TelaLogada()
         {
             InitializeComponent();
@@ -27,14 +30,50 @@ namespace PIM__FolhaDePagamento
         private void buttonVerificarFuncionario_Click(object sender, EventArgs e)
         {
             this.Close();
-            ntInserirCPF_Funcionario = new Thread(InserirCPF_Funcionario);
-            ntInserirCPF_Funcionario.SetApartmentState(ApartmentState.STA);
-            ntInserirCPF_Funcionario.Start();
+            ntVerificarFuncionario = new Thread(VerificarFuncionario);
+            ntVerificarFuncionario.SetApartmentState(ApartmentState.STA);
+            ntVerificarFuncionario.Start();
         }
 
-        private void InserirCPF_Funcionario()
+        private void VerificarFuncionario()
         {
-            Application.Run(new InserirCPF_Funcionario());
+            Application.Run(new VerificarFuncionario());
+        }
+
+        private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ntCadastrarFuncionario = new Thread(CadastrarFuncionario);
+            ntCadastrarFuncionario.SetApartmentState(ApartmentState.STA);
+            ntCadastrarFuncionario.Start();
+        }
+        private void CadastrarFuncionario()
+        {
+            Application.Run(new CadastrarFuncionario());
+        }
+
+        private void btnEmpresa_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ntEmpresa = new Thread(Empresa);
+            ntEmpresa.SetApartmentState(ApartmentState.STA);
+            ntEmpresa.Start();
+        }
+        private void Empresa()
+        {
+            Application.Run(new Empresa());
+        }
+
+        private void buttonLGPD_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ntLGPD = new Thread(LGPD);
+            ntLGPD.SetApartmentState(ApartmentState.STA);
+            ntLGPD.Start();
+        }
+        private void LGPD()
+        {
+            Application.Run(new LGPD());
         }
     }
 }

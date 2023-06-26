@@ -1,4 +1,5 @@
 using System.Threading;
+using PIM__FolhaDePagamento.Utilitarios;
 
 namespace PIM__FolhaDePagamento
 {
@@ -27,16 +28,25 @@ namespace PIM__FolhaDePagamento
 
         private void botaoEntrar_Click(object sender, EventArgs e)
         {
-            if(txtLogin.Text == "a" && txtSenha.Text == "a")
+            Controle controle = new Controle();
+            controle.Acessar(txtLogin.Text, txtSenha.Text);
+            if (controle.mensagem.Equals(""))
             {
-                this.Close();
-                ntTelaLogada = new Thread(TelaLogadaForm);
-                ntTelaLogada.SetApartmentState(ApartmentState.STA);
-                ntTelaLogada.Start();
+                if (controle.cadastrado)
+                {
+                    this.Close();
+                    ntTelaLogada = new Thread(TelaLogadaForm);
+                    ntTelaLogada.SetApartmentState(ApartmentState.STA);
+                    ntTelaLogada.Start();
+                }
+                else
+                {
+                    MessageBox.Show("Login ou senha incorretos", "Login inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Login ou senha inválidos");
+                MessageBox.Show(controle.mensagem);
             }
         }
 
@@ -61,6 +71,11 @@ namespace PIM__FolhaDePagamento
         private void txtSenha_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEsqueciSenha_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Olá! Não lembra sua senha? Não se preocupe, entre em contato com o seu setor de RH para a recuperação e alteração.", "Esqueceu senha", MessageBoxButtons.OK, MessageBoxIcon.Question);
         }
     }
 }
